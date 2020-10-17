@@ -10,15 +10,11 @@ import androidx.navigation.fragment.findNavController
 import sheridan.muhammal.assignment2.R
 import sheridan.muhammal.assignment2.database.Envelope
 import sheridan.muhammal.assignment2.databinding.FragmentInputBinding
-import sheridan.muhammal.assignment2.ui.model.Die
-import sheridan.muhammal.assignment2.ui.DieViewModel
-import sheridan.muhammal.assignment2.ui.settings.KittySettings
 import java.util.Date
 
 class InputFragment : Fragment() {
 
     private lateinit var binding: FragmentInputBinding
-    private lateinit var die: Die
     private val viewModel: InputViewModel by viewModels()
 
     override fun onCreateView(
@@ -34,7 +30,6 @@ class InputFragment : Fragment() {
 //            if(it is Long) showOutput(it)
 //        }
 
-        die = viewModel.die
 
         return binding.root
     }
@@ -43,46 +38,32 @@ class InputFragment : Fragment() {
         super.onResume()
 
         // set the default message from the settings
-        readSettings()
+      //  readSettings()
     }
 
     private fun rollDice(){
         // get urgent flag value
-        val isUrgent: Boolean = binding.urgentCheckBox.isChecked
-        // get the selected message text
-        val textMessage = when (binding.messageGroup.checkedRadioButtonId) {
-            R.id.purr_button -> getString(R.string.cat_purr)
-            R.id.mew_button -> getString(R.string.cat_mew)
-            R.id.hiss_button -> getString(R.string.cat_hiss)
-            else -> getString(R.string.undefined)
-        }
-        die.roll()
-        displayDice()
-        die.roll()
-        displayDice1()
-        die.roll()
-        displayDice2()
-        viewModel.send(Envelope(0, isUrgent, textMessage, Date()))
+//        val isUrgent: Boolean = binding.urgentCheckBox.isChecked
+//        // get the selected message text
+//        val textMessage = when (binding.messageGroup.checkedRadioButtonId) {
+//            R.id.purr_button -> getString(R.string.cat_purr)
+//            R.id.mew_button -> getString(R.string.cat_mew)
+//            R.id.hiss_button -> getString(R.string.cat_hiss)
+//            else -> getString(R.string.undefined)
+//        }
+        val die = listOf(1,2,3,4,5,6)
+        val randomDie0 = die.random()
+        val randomDie1 = die.random()
+        val randomDie2 = die.random()
+        val totalSum = randomDie0 + randomDie1 + randomDie2
+        binding.resultText.text = randomDie0.toString()
+        binding.resultText1.text = randomDie1.toString()
+        binding.resultText2.text = randomDie2.toString()
+        binding.totalSum.text = totalSum.toString()
+
+        viewModel.send(Envelope(0, randomDie0.toString(), randomDie1.toString(),randomDie2.toString(),totalSum.toString(), Date()))
     }
 
-    private fun displayDice() {
-        binding.resultText.text =
-            if (die.value > 0)
-                die.value.toString()
-            else " "
-    }
-    private fun displayDice1() {
-        binding.resultText1.text =
-            if (die.value > 0)
-                die.value.toString()
-            else " "
-    }
-    private fun displayDice2() {
-        binding.resultText2.text =
-            if (die.value > 0)
-                die.value.toString()
-            else " "
-    }
 
     private fun showOutput(envelopeId: Long) {
 
@@ -92,21 +73,21 @@ class InputFragment : Fragment() {
         findNavController().navigate(action)
     }
 
-    private fun readSettings(){
-
-        val settings = KittySettings(requireContext())
-
-        binding.urgentCheckBox.isChecked = settings.urgent
-
-        binding.messageGroup.check(
-            when(settings.messageText){
-                getString(R.string.cat_purr) -> R.id.purr_button
-                getString(R.string.cat_mew) -> R.id.mew_button
-                getString(R.string.cat_hiss) -> R.id.hiss_button
-                else -> R.id.mew_button
-            }
-        )
-    }
+//    private fun readSettings(){
+//
+//        val settings = KittySettings(requireContext())
+//
+//        binding.urgentCheckBox.isChecked = settings.urgent
+//
+//        binding.messageGroup.check(
+//            when(settings.messageText){
+//                getString(R.string.cat_purr) -> R.id.purr_button
+//                getString(R.string.cat_mew) -> R.id.mew_button
+//                getString(R.string.cat_hiss) -> R.id.hiss_button
+//                else -> R.id.mew_button
+//            }
+//        )
+//    }
 
 
 }

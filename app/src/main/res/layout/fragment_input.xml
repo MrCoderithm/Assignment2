@@ -17,20 +17,20 @@
             android:layout_height="0dp"
             android:layout_weight="1" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/select_message"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/select_message"-->
+<!--            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />-->
 
-        <CheckBox
-            android:id="@+id/urgent_check_box"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/gap0"
-            android:checked="true"
-            android:text="@string/urgent" />
+<!--        <CheckBox-->
+<!--            android:id="@+id/urgent_check_box"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center_horizontal"-->
+<!--            android:layout_marginTop="@dimen/gap0"-->
+<!--            android:checked="true"-->
+<!--            android:text="@string/urgent" />-->
 
         <TextView
             android:id="@+id/result_text1"
@@ -53,34 +53,41 @@
             android:text=" "
             android:textSize="30sp" />
 
-        <RadioGroup
-            android:id="@+id/message_group"
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/total_sum"
+            android:layout_width="51dp"
             android:layout_height="wrap_content"
-            android:checkedButton="@id/mew_button">
+            android:text=" "
+            android:textSize="30sp" />
 
-            <RadioButton
-                android:id="@+id/purr_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/cat_purr" />
+<!--        <RadioGroup-->
+<!--            android:id="@+id/message_group"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:checkedButton="@id/mew_button">-->
 
-            <RadioButton
-                android:id="@+id/mew_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/cat_mew" />
+<!--            <RadioButton-->
+<!--                android:id="@+id/purr_button"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="@string/cat_purr" />-->
 
-            <RadioButton
-                android:id="@+id/hiss_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/cat_hiss" />
+<!--            <RadioButton-->
+<!--                android:id="@+id/mew_button"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="@string/cat_mew" />-->
 
-        </RadioGroup>
+<!--            <RadioButton-->
+<!--                android:id="@+id/hiss_button"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="@string/cat_hiss" />-->
+
+<!--        </RadioGroup>-->
 
         <Button
             android:id="@+id/roll_button"

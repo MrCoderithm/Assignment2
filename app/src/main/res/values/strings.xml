@@ -63,5 +63,9 @@
     <!-- confirmation dialog -->
     <string name="confirm_delete_message">Do you want to remove this message?</string>
     <string name="confirm_clear_message">Do you want to clear the history?</string>
+    <string name="die0">die0</string>
+    <string name="die1">die1</string>
+    <string name="die2">die2</string>
+    <string name="total_sum">Total Sum</string>
 
 </resources>

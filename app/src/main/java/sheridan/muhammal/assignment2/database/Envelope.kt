@@ -10,11 +10,20 @@ data class Envelope(
     @PrimaryKey(autoGenerate = true)
     var id: Long,
 
-    @ColumnInfo(name = "is_urgent")
-    val isUrgent: Boolean,
+//    @ColumnInfo(name = "is_urgent")
+//    val isUrgent: Boolean,
 
-    @ColumnInfo(name = "text_message")
-    val textMessage: String,
+    @ColumnInfo(name = "randomDie_0")
+    val randomDie0: String,
+
+    @ColumnInfo(name = "randomDie_1")
+    val randomDie1: String,
+
+    @ColumnInfo(name = "randomDie_2")
+    val randomDie2: String,
+
+    @ColumnInfo(name = "total_sum")
+    val totalSum: String,
 
     @ColumnInfo(name = "time_stamp")
     val timeStamp: Date

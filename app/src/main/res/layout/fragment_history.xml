@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <LinearLayout
-        android:name="ca.tetervak.kittymessage6.ui.history.HistoryFragment"
+        android:name="sheridan.muhammal.assignment2.ui.history.HistoryFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
