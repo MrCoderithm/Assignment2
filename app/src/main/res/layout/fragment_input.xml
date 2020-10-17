@@ -32,6 +32,27 @@
             android:checked="true"
             android:text="@string/urgent" />
 
+        <TextView
+            android:id="@+id/result_text1"
+            android:layout_width="46dp"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/result_text"
+            android:layout_width="41dp"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/result_text2"
+            android:layout_width="51dp"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textSize="30sp" />
+
         <RadioGroup
             android:id="@+id/message_group"
             android:layout_width="wrap_content"
@@ -62,7 +83,7 @@
         </RadioGroup>
 
         <Button
-            android:id="@+id/send_button"
+            android:id="@+id/roll_button"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

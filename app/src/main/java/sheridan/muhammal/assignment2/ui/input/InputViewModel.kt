@@ -9,8 +9,11 @@ import sheridan.muhammal.assignment2.database.Envelope
 import sheridan.muhammal.assignment2.database.EnvelopeDao
 import sheridan.muhammal.assignment2.database.EnvelopeDatabase
 import kotlinx.coroutines.launch
+import sheridan.muhammal.assignment2.ui.model.Die
 
 class InputViewModel(application: Application) : AndroidViewModel(application) {
+
+    val die: Die = Die()
 
     private val _envelopeId = MutableLiveData<Long?>().apply{
         value = null

@@ -8,7 +8,6 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import sheridan.muhammal.assignment2.ui.output.OutputFragment
 import sheridan.muhammal.assignment2.R
 import sheridan.muhammal.assignment2.databinding.FragmentOutputBinding
 import sheridan.muhammal.assignment2.ui.dialogs.ConfirmationDialog.ConfirmationResult
