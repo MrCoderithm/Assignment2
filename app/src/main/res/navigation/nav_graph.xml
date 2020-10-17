@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/input_fragment">
+    <fragment
+        android:id="@+id/input_fragment"
+        android:name="sheridan.muhammal.assignment2.ui.input.InputFragment"
+        android:label="@string/input_fragment_label"
+        tools:layout="@layout/fragment_input">
+        <action
+            android:id="@+id/action_input_to_output"
+            app:destination="@id/output_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/output_fragment"
+        android:name="sheridan.muhammal.assignment2.ui.output.OutputFragment"
+        android:label="@string/output_fragment_label"
+        tools:layout="@layout/fragment_output">
+        <argument
+            android:name="envelopeId"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_output_to_confirmation"
+            app:destination="@id/confirmation_dialog" />
+    </fragment>
+    <fragment
+        android:id="@+id/history_fragment"
+        android:name="sheridan.muhammal.assignment2.ui.history.HistoryFragment"
+        android:label="@string/history_fragment_label"
+        tools:layout="@layout/fragment_history" >
+        <action
+            android:id="@+id/action_history_to_output"
+            app:destination="@id/output_fragment" />
+        <action
+            android:id="@+id/action_history_to_confirmation"
+            app:destination="@id/confirmation_dialog" />
+    </fragment>
+    <dialog
+        android:id="@+id/about_dialog"
+        android:name="sheridan.muhammal.assignment2.ui.dialogs.AboutDialog"
+        android:label="AboutFragment" />
+    <fragment
+        android:id="@+id/settings_fragment"
+        android:name="sheridan.muhammal.assignment2.ui.settings.SettingsFragment"
+        android:label="@string/settings_fragment_label" />
+    <dialog
+        android:id="@+id/confirmation_dialog"
+        android:name="sheridan.muhammal.assignment2.ui.dialogs.ConfirmationDialog"
+        android:label="ConfirmationDialog" >
+        <argument
+            android:name="message"
+            app:argType="string" />
+        <argument
+            android:name="requestCode"
+            app:argType="integer" />
+    </dialog>
+    <action
+        android:id="@+id/action_global_to_input"
+        app:destination="@id/input_fragment"
+        app:popUpTo="@id/input_fragment"
+        app:popUpToInclusive="true" />
+    <action android:id="@+id/action_global_to_about"
+        app:destination="@id/about_dialog" />
+</navigation>
