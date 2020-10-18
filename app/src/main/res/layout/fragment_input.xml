@@ -33,10 +33,10 @@
             android:textSize="40sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.181"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.404" />
+            app:layout_constraintVertical_bias="0.306" />
 
         <TextView
             android:id="@+id/total_sum"
@@ -50,15 +50,17 @@
             android:textSize="40sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.187"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.328" />
 
         <Button
             android:id="@+id/roll_button"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="180dp"
             android:layout_height="92dp"
-            android:layout_marginBottom="144dp"
+            android:layout_marginBottom="32dp"
             android:text="@string/Roll"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/space2"
