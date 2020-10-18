@@ -7,10 +7,10 @@
     </string-array>
 
     <!-- settings fragment -->
-    <string-array name="message_text_entries">
-        <item>@string/cat_purr</item>
-        <item>@string/cat_mew</item>
-        <item>@string/cat_hiss</item>
-    </string-array>
+<!--    <string-array name="message_text_entries">-->
+<!--        <item>@string/cat_purr</item>-->
+<!--        <item>@string/cat_mew</item>-->
+<!--        <item>@string/cat_hiss</item>-->
+<!--    </string-array>-->
 
 </resources>
