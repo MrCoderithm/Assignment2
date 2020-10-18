@@ -12,7 +12,7 @@ import sheridan.muhammal.assignment2.R
 import sheridan.muhammal.assignment2.databinding.FragmentOutputBinding
 import sheridan.muhammal.assignment2.ui.dialogs.ConfirmationDialog.ConfirmationResult
 import sheridan.muhammal.assignment2.ui.dialogs.ConfirmationDialog.Companion.CONFIRMATION_RESULT
-import sheridan.muhammal.assignment2.ui.settings.KittySettings
+import sheridan.muhammal.assignment2.ui.settings.DiceSettings
 
 class OutputFragment : Fragment() {
 
@@ -69,7 +69,7 @@ class OutputFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when(item.itemId){
             R.id.action_delete -> {
-                val settings = KittySettings(requireContext())
+                val settings = DiceSettings(requireContext())
                 if(settings.confirmDelete){
                     val action = OutputFragmentDirections.actionOutputToConfirmation(
                         getString(R.string.confirm_delete_message), CONFIRM_DELETE)

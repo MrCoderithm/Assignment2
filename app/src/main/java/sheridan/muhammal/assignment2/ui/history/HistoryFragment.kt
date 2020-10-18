@@ -12,7 +12,7 @@ import sheridan.muhammal.assignment2.R
 import sheridan.muhammal.assignment2.database.Envelope
 import sheridan.muhammal.assignment2.databinding.FragmentHistoryBinding
 import sheridan.muhammal.assignment2.ui.dialogs.ConfirmationDialog
-import sheridan.muhammal.assignment2.ui.settings.KittySettings
+import sheridan.muhammal.assignment2.ui.settings.DiceSettings
 
 /**
  * A fragment representing a list of Items.
@@ -83,7 +83,7 @@ class HistoryFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_clear -> {
-                val settings = KittySettings(requireContext())
+                val settings = DiceSettings(requireContext())
                 if(settings.confirmClear){
                     val action = HistoryFragmentDirections.actionHistoryToConfirmation(
                         getString(R.string.confirm_clear_message), CONFIRM_CLEAR)

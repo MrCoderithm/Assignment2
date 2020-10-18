@@ -10,7 +10,7 @@ import androidx.navigation.fragment.findNavController
 import sheridan.muhammal.assignment2.R
 import sheridan.muhammal.assignment2.database.Envelope
 import sheridan.muhammal.assignment2.databinding.FragmentInputBinding
-import sheridan.muhammal.assignment2.ui.settings.KittySettings
+import sheridan.muhammal.assignment2.ui.settings.DiceSettings
 import java.util.Date
 
 class InputFragment : Fragment() {
@@ -92,7 +92,7 @@ private fun rollDice() {
 
     private fun readSettings(){
 
-        val settings = KittySettings(requireContext())
+        val settings = DiceSettings(requireContext())
 //
 //        binding.urgentCheckBox.isChecked = settings.urgent
 //
