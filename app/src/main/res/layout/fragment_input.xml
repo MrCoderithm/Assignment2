@@ -1,107 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
 
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
+
         android:layout_height="match_parent"
 
         android:gravity="center_horizontal"
-        android:orientation="vertical"
-
         tools:context=".ui.input.InputFragment">
 
         <Space
-            android:layout_width="match_parent"
+            android:id="@+id/space"
+            android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_weight="1" />
-
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="@string/select_message"-->
-<!--            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />-->
-
-<!--        <CheckBox-->
-<!--            android:id="@+id/urgent_check_box"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_gravity="center_horizontal"-->
-<!--            android:layout_marginTop="@dimen/gap0"-->
-<!--            android:checked="true"-->
-<!--            android:text="@string/urgent" />-->
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/result_text"
-            android:layout_width="41dp"
-            android:layout_height="wrap_content"
-            android:text=" "
-            android:textSize="30sp" />
-
-        <TextView
-            android:id="@+id/result_text1"
-            android:layout_width="46dp"
-            android:layout_height="wrap_content"
-            android:text=" "
-            android:textSize="30sp" />
-
-        <TextView
-            android:id="@+id/result_text2"
-            android:layout_width="51dp"
-            android:layout_height="wrap_content"
-            android:text=" "
-            android:textSize="30sp" />
+            android:id="@+id/total_sum_text"
+            android:layout_width="217dp"
+            android:layout_height="82dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="137dp"
+            android:layout_marginEnd="223dp"
+            android:layout_marginBottom="554dp"
+            android:text="TOTAL SUM"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.181"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.404" />
 
         <TextView
             android:id="@+id/total_sum"
-            android:layout_width="51dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" "
-            android:textSize="30sp" />
-
-<!--        <RadioGroup-->
-<!--            android:id="@+id/message_group"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:checkedButton="@id/mew_button">-->
-
-<!--            <RadioButton-->
-<!--                android:id="@+id/purr_button"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_weight="1"-->
-<!--                android:text="@string/cat_purr" />-->
-
-<!--            <RadioButton-->
-<!--                android:id="@+id/mew_button"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_weight="1"-->
-<!--                android:text="@string/cat_mew" />-->
-
-<!--            <RadioButton-->
-<!--                android:id="@+id/hiss_button"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_weight="1"-->
-<!--                android:text="@string/cat_hiss" />-->
-
-<!--        </RadioGroup>-->
+            android:layout_marginStart="286dp"
+            android:layout_marginTop="132dp"
+            android:layout_marginEnd="125dp"
+            android:layout_marginBottom="546dp"
+            android:text=""
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/roll_button"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/gap0"
-            android:text="@string/send"
+            android:layout_width="180dp"
+            android:layout_height="92dp"
+            android:layout_marginBottom="144dp"
+            android:text="@string/Roll"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/space2"
+            app:layout_constraintHorizontal_bias="0.458"
+            app:layout_constraintStart_toStartOf="@+id/space2"
             tools:ignore="RtlHardcoded" />
 
         <Space
-            android:layout_width="match_parent"
+            android:id="@+id/space2"
+            android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_weight="2" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/roll_button" />
 
-    </LinearLayout>
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="261dp"
+            android:layout_marginEnd="280dp"
+            android:layout_marginBottom="331dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/empty" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="131dp"
+            android:layout_marginTop="261dp"
+            android:layout_marginEnd="145dp"
+            android:layout_marginBottom="333dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/empty" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="132dp"
+            android:layout_height="137dp"
+            android:layout_marginStart="266dp"
+            android:layout_marginTop="261dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="333dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/empty" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

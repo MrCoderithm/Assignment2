@@ -67,5 +67,6 @@
     <string name="die1">die1</string>
     <string name="die2">die2</string>
     <string name="total_sum">Total Sum</string>
+    <string name="Roll">Roll</string>
 
 </resources>

@@ -25,7 +25,7 @@ class InputFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentInputBinding.inflate(inflater, container, false)
 
-        binding.rollButton.setOnClickListener { rollDice() }
+                binding.rollButton.setOnClickListener { rollDice() }
 
 //        viewModel.envelopeId.observe(viewLifecycleOwner){
 //            if(it is Long) showOutput(it)
@@ -35,6 +35,7 @@ class InputFragment : Fragment() {
         return binding.root
     }
 
+
     override fun onResume() {
         super.onResume()
 
@@ -42,29 +43,44 @@ class InputFragment : Fragment() {
       //  readSettings()
     }
 
-    private fun rollDice(){
-        // get urgent flag value
-//        val isUrgent: Boolean = binding.urgentCheckBox.isChecked
-//        // get the selected message text
-//        val textMessage = when (binding.messageGroup.checkedRadioButtonId) {
-//            R.id.purr_button -> getString(R.string.cat_purr)
-//            R.id.mew_button -> getString(R.string.cat_mew)
-//            R.id.hiss_button -> getString(R.string.cat_hiss)
-//            else -> getString(R.string.undefined)
-//        }
-        val die = listOf(1,2,3,4,5,6)
-        val randomDie0 = die.random()
-        val randomDie1 = die.random()
-        val randomDie2 = die.random()
-        val totalSum = randomDie0 + randomDie1 + randomDie2
-        binding.resultText.text = randomDie0.toString()
-        binding.resultText1.text = randomDie1.toString()
-        binding.resultText2.text = randomDie2.toString()
-        binding.totalSum.text = totalSum.toString()
+private fun rollDice() {
 
-        viewModel.send(Envelope(0, randomDie0.toString(), randomDie1.toString(),randomDie2.toString(),totalSum.toString(), Date()))
+    val randomInt = (1..6).random()
+    val randomInt1 = (1..6).random()
+    val randomInt2 = (1..6).random()
+    val totalSum = randomInt + randomInt1 + randomInt2
+
+    val drawableResource = when (randomInt) {
+        1 -> R.drawable.die1
+        2 -> R.drawable.die2
+        3 -> R.drawable.die3
+        4 -> R.drawable.die4
+        5 -> R.drawable.die5
+        else -> R.drawable.die6
     }
+    val drawableResource1 = when (randomInt1) {
+        1 -> R.drawable.die1
+        2 -> R.drawable.die2
+        3 -> R.drawable.die3
+        4 -> R.drawable.die4
+        5 -> R.drawable.die5
+        else -> R.drawable.die6
+    }
+    val drawableResource2 = when (randomInt2) {
+        1 -> R.drawable.die1
+        2 -> R.drawable.die2
+        3 -> R.drawable.die3
+        4 -> R.drawable.die4
+        5 -> R.drawable.die5
+        else -> R.drawable.die6
+    }
+    binding.imageView1.setImageResource(drawableResource)
+    binding.imageView2.setImageResource(drawableResource1)
+    binding.imageView3.setImageResource(drawableResource2)
+    binding.totalSum.text = totalSum.toString()
 
+    viewModel.send(Envelope(0, randomInt.toString(), randomInt1.toString(),randomInt2.toString(),totalSum.toString(), Date()))
+}
 
     private fun showOutput(envelopeId: Long) {
 
