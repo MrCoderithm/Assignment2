@@ -21,13 +21,15 @@
 
         <TextView
             android:id="@+id/history_total"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="395dp"
+            android:layout_height="58dp"
             android:layout_marginLeft="@dimen/gap1"
             android:layout_marginTop="@dimen/gap1"
+            android:textAlignment="center"
+            android:textAllCaps="true"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             tools:ignore="RtlHardcoded"
-            tools:text="History Total: 15 messages" />
+            tools:text="History Sum: 15" />
 
     </LinearLayout>
 </layout>

@@ -22,9 +22,6 @@
 
     <include layout="@layout/content_main" />
 
-    <TextView
-        android:id="@+id/sheridan"
-        android:text="@string/sheridan"
-        style="@style/sheridan_label" />
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
