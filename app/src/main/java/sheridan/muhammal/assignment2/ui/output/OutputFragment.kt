@@ -89,7 +89,7 @@ class OutputFragment : Fragment() {
     }
 
     private fun showInput(){
-        val action = OutputFragmentDirections.actionGlobalToInput()
+        val action = OutputFragmentDirections.actionOutputToHistory()
         navController.navigate(action)
     }
 
