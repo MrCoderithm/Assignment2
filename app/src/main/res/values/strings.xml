@@ -12,7 +12,9 @@
     <string name="about">About</string>
     <string name="author">Ali Muhammad, Sheridan College, 2020</string>
 
+
     <!-- input / output labels -->
+    <string name="select_message">Select a message</string>
     <string name="message_label">Die Total</string>
     <string name="undefined">Undefined</string>
 

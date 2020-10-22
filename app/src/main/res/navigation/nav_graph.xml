@@ -52,6 +52,9 @@
         android:id="@+id/confirmation_dialog"
         android:name="sheridan.muhammal.assignment2.ui.dialogs.ConfirmationDialog"
         android:label="ConfirmationDialog" >
+        <action
+            android:id="@+id/action_output_to_history"
+            app:destination="@id/input_fragment" />
         <argument
             android:name="message"
             app:argType="string" />
