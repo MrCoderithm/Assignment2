@@ -1,24 +1,5 @@
-<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+<PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <PreferenceCategory android:title="@string/default_message">
-
-<!--        <SwitchPreferenceCompat-->
-<!--            android:defaultValue="true"-->
-<!--            android:key="urgent"-->
-<!--            android:summaryOff="@string/not_urgent"-->
-<!--            android:summaryOn="@string/urgent"-->
-<!--            android:title="@string/urgent_delivery" />-->
-
-<!--        <ListPreference-->
-<!--            android:defaultValue="@string/cat_mew"-->
-<!--            android:entries="@array/message_text_entries"-->
-<!--            android:entryValues="@array/message_text_entries"-->
-<!--            android:key="message"-->
-<!--            android:title="@string/message_text"-->
-<!--            app:useSimpleSummaryProvider="true" />-->
-
-    </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/confirmation_dialogs">
 

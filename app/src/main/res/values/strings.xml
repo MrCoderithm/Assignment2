@@ -12,18 +12,8 @@
     <string name="about">About</string>
     <string name="author">Ali Muhammad, Sheridan College, 2020</string>
 
-<!--    &lt;!&ndash; radio button labels / output strings &ndash;&gt;-->
-<!--    <string name="cat_purr">Purr</string>-->
-<!--    <string name="cat_mew">Mew</string>-->
-<!--    <string name="cat_hiss">Hiss</string>-->
-
-<!--    &lt;!&ndash; urgent / not urgent &ndash;&gt;-->
-<!--    <string name="urgent">Urgent</string>-->
-<!--    <string name="not_urgent">Not Urgent</string>-->
-
     <!-- input / output labels -->
-    <string name="select_message">Select a message</string>
-    <string name="message_label">Received message</string>
+    <string name="message_label">Die Total</string>
     <string name="undefined">Undefined</string>
 
     <!-- button labels -->
@@ -33,9 +23,9 @@
 
 
     <!-- activity & fragment labels -->
-    <string name="input_fragment_label">Input</string>
-    <string name="output_fragment_label">Output</string>
-    <string name="history_fragment_label">History</string>
+    <string name="input_fragment_label">Roller Page</string>
+    <string name="output_fragment_label">History Edit Page</string>
+    <string name="history_fragment_label">History Page</string>
     <string name="settings_fragment_label">Settings</string>
 
     <!-- the history fragment -->

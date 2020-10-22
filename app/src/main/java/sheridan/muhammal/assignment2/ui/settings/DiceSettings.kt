@@ -10,15 +10,6 @@ class DiceSettings(private val context: Context){
     private val preferences: SharedPreferences =
         PreferenceManager.getDefaultSharedPreferences(context)
 
-//    val urgent: Boolean
-//        get() = preferences.getBoolean("urgent", true)
-//
-//    val messageText: String
-//        get(){
-//            val mew = context.getString(R.string.cat_mew)
-//            return preferences.getString("message", mew) ?: mew
-//        }
-
     val confirmDelete: Boolean
         get() = preferences.getBoolean("confirm_delete", true)
 

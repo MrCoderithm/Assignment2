@@ -10,9 +10,6 @@ data class Envelope(
     @PrimaryKey(autoGenerate = true)
     var id: Long,
 
-//    @ColumnInfo(name = "is_urgent")
-//    val isUrgent: Boolean,
-
     @ColumnInfo(name = "randomDie_0")
     val randomDie0: String,
 

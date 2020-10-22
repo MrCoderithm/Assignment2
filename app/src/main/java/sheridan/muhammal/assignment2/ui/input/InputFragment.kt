@@ -27,20 +27,12 @@ class InputFragment : Fragment() {
 
                 binding.rollButton.setOnClickListener { rollDice() }
 
-//        viewModel.envelopeId.observe(viewLifecycleOwner){
-//            if(it is Long) showOutput(it)
-//        }
-
-
         return binding.root
     }
 
 
     override fun onResume() {
         super.onResume()
-
-        // set the default message from the settings
-      //  readSettings()
     }
 
 private fun rollDice() {
@@ -81,30 +73,4 @@ private fun rollDice() {
 
     viewModel.send(Envelope(0, randomInt.toString(), randomInt1.toString(),randomInt2.toString(),totalSum.toString(), Date()))
 }
-
-    private fun showOutput(envelopeId: Long) {
-
-        viewModel.reset() // prevents going more than once
-
-        val action = InputFragmentDirections.actionInputToOutput(envelopeId)
-        findNavController().navigate(action)
     }
-
-    private fun readSettings(){
-
-        val settings = DiceSettings(requireContext())
-//
-//        binding.urgentCheckBox.isChecked = settings.urgent
-//
-//        binding.messageGroup.check(
-//            when(settings.messageText){
-//                getString(R.string.cat_purr) -> R.id.purr_button
-//                getString(R.string.cat_mew) -> R.id.mew_button
-//                getString(R.string.cat_hiss) -> R.id.hiss_button
-//                else -> R.id.mew_button
-//            }
-//        )
-    }
-
-
-}
